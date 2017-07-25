@@ -1,4 +1,4 @@
-SELECT *
+/*SELECT *
 FROM users;
 
 
@@ -73,4 +73,10 @@ INNER JOIN comments c ON c.posts_id = p.id
 WHERE p.content LIKE '%nemo%' AND c.body IN
       (SELECT c.body
        FROM comments c
-       WHERE c.body LIKE '%SSL%' OR c.body LIKE '%firewall%');
+       WHERE c.body LIKE '%SSL%' OR c.body LIKE '%firewall%');*/
+
+SELECT u.username
+FROM users u
+INNER JOIN posts p ON p.users_id = u.id
+INNER JOIN comments c ON c.posts_id = p.id
+WHERE c.body LIKE '%programming%';
