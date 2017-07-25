@@ -1,4 +1,4 @@
-\c postgres
+/*\c postgres
 
 DROP DATABASE IF EXISTS has_many_blogs;
 DROP USER IF EXISTS has_many_user;
@@ -6,7 +6,7 @@ DROP USER IF EXISTS has_many_user;
 
 CREATE USER has_many_user;
 CREATE DATABASE has_many_blogs WITH OWNER has_many_user;
-\c has_many_blogs
+\c has_many_blogs*/
 
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS posts;
@@ -41,3 +41,4 @@ CREATE TABLE comments (
 );
 
 \i scripts/blog_data.sql;
+\i joins.sql;
